@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pills"
+        />
+
+    <EditText
+        android:id="@+id/sym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="62dp"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/med"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/sym"
+        android:layout_alignRight="@+id/sym"
+        android:layout_below="@+id/sym"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/doctor"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/med"
+        android:layout_alignStart="@+id/med"
+        android:layout_centerVertical="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/num"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/doctor"
+        android:layout_alignStart="@+id/doctor"
+        android:layout_below="@+id/doctor"
+        android:layout_marginTop="60dp"
+        android:clickable="true"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/num"
+        android:layout_alignStart="@+id/num"
+        android:layout_below="@+id/num"
+        android:background="#6868c4"
+        android:layout_marginTop="46dp"
+        android:text="PREV" />
+
+    <Button
+        android:id="@+id/next"
+        android:background="#d1c81c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/back"
+        android:layout_toEndOf="@+id/med"
+        android:layout_toRightOf="@+id/med"
+        android:text="NEXT" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="0dp"
+        android:layout_toEndOf="@+id/back"
+        android:layout_toRightOf="@+id/back"
+        android:text="Click the number for Contact" />
+
+</RelativeLayout>

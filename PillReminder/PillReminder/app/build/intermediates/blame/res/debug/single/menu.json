@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\sys1\\AndroidStudioProjects\\Prescriptor2\\app\\build\\intermediates\\res\\merged\\debug\\menu\\users.xml",
+        "source": "C:\\Users\\sys1\\AndroidStudioProjects\\Prescriptor2\\app\\src\\main\\res\\menu\\users.xml"
+    },
+    {
+        "merged": "C:\\Users\\sys1\\AndroidStudioProjects\\Prescriptor2\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_users_drawer.xml",
+        "source": "C:\\Users\\sys1\\AndroidStudioProjects\\Prescriptor2\\app\\src\\main\\res\\menu\\activity_users_drawer.xml"
+    }
+]
