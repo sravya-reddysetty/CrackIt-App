@@ -22,7 +22,18 @@
         <activity android:name=".CompanyActivity" />
         <activity android:name=".BranchActivity" />
         <activity android:name=".TopicActivity" />
-        <activity android:name=".FloatActivity"></activity>
+        <activity android:name=".FloatActivity" />
+        <activity android:name=".Main2Activity" />
+
+        <activity android:name=".Listview" />
+        <activity android:name=".Review">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Listview" />
+        </activity>
+        <activity android:name=".SeniorAdd" />
+        <activity android:name=".SeniorExtra" />
+
     </application>
 
 </manifest>
