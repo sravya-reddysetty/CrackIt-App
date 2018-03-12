@@ -6,7 +6,7 @@
 
     <string name="action_settings">Settings</string>
     <string-array name="branch">
-         <item>Select Branch......</item>
+
         <item>CSE</item>
         <item>ECE</item>
         <item>EEE</item>
@@ -14,7 +14,21 @@
         <item>CIVIL</item>
         <item>IT</item>
     </string-array>
+    <string-array name="company">
+        <item>All</item>
+        <item>Microsoft</item>
+        <item>Adobe</item>
+        <item>Oracle</item>
+        <item>deloitte</item>
+        <item>SalesForce</item>
+        <item>Pega</item>
+        <item>TCS</item>
+        <item>Pega</item>
+        <item>Infosys</item>
+        <item>Tech-Mahendra</item>
+    </string-array>
     <string-array name="topic">
+        <item>Select Topics</item>
         <item>DS</item>
         <item>OS</item>
         <item>BE</item>
@@ -29,6 +43,7 @@
         <item>2019</item>
     </string-array>
     <string-array name="round">
+        <item>Select Round-Number</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>

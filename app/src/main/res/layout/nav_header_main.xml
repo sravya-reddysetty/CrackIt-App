@@ -42,9 +42,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="monospace"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Choose Your Stream"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:text="Choose one"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView"

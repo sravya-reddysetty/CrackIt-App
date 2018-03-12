@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/question"
     android:layout_height="match_parent"
     tools:context="com.example.sys1.crack_it.CompanyActivity">
 
@@ -11,13 +10,10 @@
         android:id="@+id/b_select"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:entries="@array/branch"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="112dp" />
+        android:layout_marginTop="43dp"
+        android:entries="@array/company" />
 
     <Button
         android:id="@+id/b_sub"

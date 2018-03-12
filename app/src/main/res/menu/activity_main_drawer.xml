@@ -37,10 +37,8 @@
     <group android:checkableBehavior="single"></group>
     <item
         android:id="@+id/company"
-        android:title="COMPANY" />
-    <item
-        android:id="@+id/topics"
-        android:title="TOPICS" />
+        android:title="COMPANY"
+        />
     <item
         android:id="@+id/branches"
         android:title="BRANCHES" />

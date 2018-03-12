@@ -2,9 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sys1.crack_it">
 
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/inter"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -24,7 +33,6 @@
         <activity android:name=".TopicActivity" />
         <activity android:name=".FloatActivity" />
         <activity android:name=".Main2Activity" />
-
         <activity android:name=".Listview" />
         <activity android:name=".Review">
             <meta-data
@@ -32,8 +40,6 @@
                 android:value=".Listview" />
         </activity>
         <activity android:name=".SeniorAdd" />
-        <activity android:name=".SeniorExtra" />
-
     </application>
 
 </manifest>

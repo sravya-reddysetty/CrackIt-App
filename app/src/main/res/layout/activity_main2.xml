@@ -33,17 +33,17 @@
 
     </Spinner>
 
-    <EditText
+   <Spinner
         android:id="@+id/company_name"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:entries="@array/company"
         android:layout_below="@+id/year"
-        android:fontFamily="cursive"
-        android:layout_marginTop="44dp"
-        android:hint="Enter Company Name" />
+        android:layout_marginTop="44dp"/>
+       <!-- android:hint="Enter Company Name" />-->
 
     <Spinner
         android:id="@+id/round_number"
