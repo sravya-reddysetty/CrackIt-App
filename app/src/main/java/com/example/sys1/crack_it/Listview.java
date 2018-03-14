@@ -58,7 +58,7 @@ public class Listview extends AppCompatActivity {
        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
            @Override
            protected Void doInBackground(Void... params) {
-               if(Temp.which=="0"){
+               if(Temp.which=="0"){//for branches
                String branch=getIntent().getExtras().getString("Value");
                try {
                    final List<Question> results = Temp.mToDoTable.where()
@@ -84,6 +84,26 @@ public class Listview extends AppCompatActivity {
                    try {
                        final List<Question> results = Temp.mToDoTable.where()
                                .field("company").eq(comp).execute().get();
+                       runOnUiThread(new Runnable() {
+
+                           @Override
+                           public void run() {
+                               adapter.clear();
+                               for (Question item : results) {
+                                   adapter.add(item);
+                               }
+                           }
+                       });
+                   } catch (Exception exception) {
+                       //createAndShowDialog(exception, "Error");
+                       Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_LONG).show();
+                   }
+               }
+               else if(Temp.which=="2") {
+                   String comp= getIntent().getExtras().getString("r");
+                   try {
+                       final List<Question> results = Temp.mToDoTable.where()
+                               .field("rating").ge(comp).execute().get();
                        runOnUiThread(new Runnable() {
 
                            @Override

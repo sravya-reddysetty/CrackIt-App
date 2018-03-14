@@ -109,21 +109,6 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-   /* @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }*/
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
 
@@ -139,6 +124,11 @@ public class MainActivity extends AppCompatActivity
             Temp.which="0";
 
             Intent i=new Intent(MainActivity.this,BranchActivity.class);
+            startActivity(i);
+        }
+        else if (id == R.id.rating) {
+            Temp.which="2";
+            Intent i=new Intent(MainActivity.this,TopicActivity.class);
             startActivity(i);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -165,7 +155,8 @@ public class MainActivity extends AppCompatActivity
                     tableDefinition.put("name", ColumnDataType.String);
                     tableDefinition.put("text", ColumnDataType.String);
                     tableDefinition.put("branch",ColumnDataType.String);
-                    //tableDefinition.put("complete", ColumnDataType.Boolean);
+                    tableDefinition.put("rating",ColumnDataType.String);
+                    tableDefinition.put("n",ColumnDataType.Integer);
 
                     localStore.defineTable("Question", tableDefinition);
 

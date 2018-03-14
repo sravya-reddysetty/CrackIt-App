@@ -27,13 +27,12 @@
         <item>Infosys</item>
         <item>Tech-Mahendra</item>
     </string-array>
-    <string-array name="topic">
-        <item>Select Topics</item>
-        <item>DS</item>
-        <item>OS</item>
-        <item>BE</item>
-        <item>CN</item>
-        <item>CC</item>
+    <string-array name="ratee">
+        <item>5</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
     </string-array>
     <string-array name="year">
         <item>2015</item>

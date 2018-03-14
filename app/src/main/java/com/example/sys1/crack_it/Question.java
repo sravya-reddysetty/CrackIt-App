@@ -13,11 +13,17 @@ public class Question implements Serializable {
     private String mId;//most important as id is default schema
     @com.google.gson.annotations.SerializedName("company")
     private String company;
+    @com.google.gson.annotations.SerializedName("rating")
+    private String rating;
+    @com.google.gson.annotations.SerializedName("n")
+    public int n;
     public Question(String name,String text) {
         this.setName(name);
         this.setText(text);
     }
     public Question(){}
+    public String getRating() { return rating; }
+    public final void setRating(String t) { rating = t; }
     public String toString() {
         return getName();
     }
