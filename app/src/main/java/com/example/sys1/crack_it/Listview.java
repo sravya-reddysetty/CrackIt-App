@@ -58,7 +58,7 @@ public class Listview extends AppCompatActivity {
        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
            @Override
            protected Void doInBackground(Void... params) {
-               if(Temp.which=="0"){
+               if(Temp.which=="0"){//for branches
                String branch=getIntent().getExtras().getString("Value");
                try {
                    final List<Question> results = Temp.mToDoTable.where()

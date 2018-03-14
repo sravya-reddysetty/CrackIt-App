@@ -38,10 +38,14 @@
     <item
         android:id="@+id/company"
         android:title="COMPANY"
+        android:icon="@drawable/company"
+        android:iconTint="@color/colorAccent"
         />
     <item
         android:id="@+id/branches"
-        android:title="BRANCHES" />
+        android:title="BRANCHES"
+        android:icon="@drawable/willow"
+        android:iconTint="@color/colorAccent"/>
 
 
 </menu>
