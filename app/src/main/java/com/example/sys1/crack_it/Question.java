@@ -1,7 +1,5 @@
 package com.example.sys1.crack_it;
-
 import java.io.Serializable;
-
 public class Question implements Serializable {
     @com.google.gson.annotations.SerializedName("name")
     private String name;
@@ -39,7 +37,6 @@ public class Question implements Serializable {
     public final void setText(String t) { text = t; }
     public boolean equals(Object o) {
         return o instanceof Question && ((Question) o).name.equals(name);
-
     }
     public String getId() {
         return mId;

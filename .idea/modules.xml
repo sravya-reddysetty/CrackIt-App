@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ccrakit.iml" filepath="$PROJECT_DIR$/ccrakit.iml" />
+      <module fileurl="file://C:\Users\sys1\AndroidStudioProjects\ccrakitt\ccrakit.iml" filepath="C:\Users\sys1\AndroidStudioProjects\ccrakitt\ccrakit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ccrakitt.iml" filepath="$PROJECT_DIR$/.idea/ccrakitt.iml" />
     </modules>
   </component>
 </project>
