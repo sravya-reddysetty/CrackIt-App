@@ -101,6 +101,8 @@ public class Listview extends AppCompatActivity {
                }
                else if(Temp.which=="2") {
                    String comp= getIntent().getExtras().getString("r");
+                   //String round= getIntent().getExtras().getString("round");
+                 //  Toast.makeText(getApplicationContext(),round,Toast.LENGTH_LONG).show();
                    try {
                        final List<Question> results = Temp.mToDoTable.where()
                                .field("rating").ge(comp).execute().get();

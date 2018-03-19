@@ -17,7 +17,7 @@
         android:iconTint="@color/colorAccent"/>
     <item
         android:id="@+id/rating"
-        android:title="Rating"
+        android:title="Difficulty Level"
         android:icon="@drawable/star"/>
 
 

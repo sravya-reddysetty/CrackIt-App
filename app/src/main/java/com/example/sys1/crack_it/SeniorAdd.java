@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -20,11 +21,10 @@ import java.util.concurrent.ExecutionException;
 import static com.example.sys1.crack_it.Temp.mclient;
 
 public class SeniorAdd extends AppCompatActivity {
-    Button sub,m1,m2,m3,m4;
+    Button sub,m1,m2,m3,m4,add;
     int t1=0,t2=0,t3=0,t4=0;
     private final int REQ_CODE_SPEECH_OUTPUT=143;
 EditText ed,ed2,ed3,ed4;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,7 @@ EditText ed,ed2,ed3,ed4;
         m3=(Button) findViewById(R.id.m3);
         m4=(Button) findViewById(R.id.m4);
         sub=(Button)findViewById(R.id.submit);
+        add=(Button)findViewById(R.id.add);
         ed=(EditText)findViewById(R.id.Ques1);
         ed2=(EditText)findViewById(R.id.Ques3);
         ed3=(EditText)findViewById(R.id.Ques2);
@@ -74,8 +75,26 @@ EditText ed,ed2,ed3,ed4;
         if(!(ed2.getText().toString().equals("")))addItem(view,ed2);
         if(!(ed3.getText().toString().equals("")))addItem(view,ed3);
         if(!(ed4.getText().toString().equals(""))) addItem(view,ed4);
+        Toast.makeText(getApplicationContext(),"Your Quesions have been recorded.",Toast.LENGTH_LONG).show();
     }
 });
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+               if((ed.getText().toString().equals(""))||ed2.getText().toString().equals("")||ed3.getText().toString().equals("")||ed4.getText().toString().equals("")){
+                Toast.makeText(getApplicationContext(),"Fill the empty fields before adding new questions",Toast.LENGTH_LONG).show();}
+                else
+               {
+                  if((!ed.getText().toString().equals(""))) addItem(view, ed);
+                   if(!(ed2.getText().toString().equals("")))addItem(view,ed2);
+                   if(!(ed3.getText().toString().equals("")))addItem(view,ed3);
+                   if(!(ed4.getText().toString().equals(""))) addItem(view,ed4);
+                   Toast.makeText(getApplicationContext(),"Your Quesions have been recorded.",Toast.LENGTH_LONG).show();
+               }
+            }
+        });
+
         //Toast.makeText(getApplicationContext(),getSpinnerValue,Toast.LENGTH_LONG).show();
 
     }
@@ -155,6 +174,8 @@ EditText ed,ed2,ed3,ed4;
         item.setBranch( getSpinnerValue);
         String company=getIntent().getExtras().getString("Val");
         item.setCompany(company);
+        //String round=getIntent().getExtras().getString("ro");
+        //item.setRound(round);
         item.setRating("4");
         item.n=1;
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){

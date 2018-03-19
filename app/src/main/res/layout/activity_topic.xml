@@ -14,9 +14,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="24dp"
         android:fontFamily="cursive"
-        android:text="Search Questions based on ratings"
+        android:text="Search Questions based on ratings and round"
         android:textColor="@color/colorAccent"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
     <Spinner
         android:id="@+id/b_select"
@@ -50,5 +50,14 @@
         android:hint="Click the button for Seaching!!"
         android:textColorHint="@color/colorAccent"
         android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/round_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/b_select"
+        android:entries="@array/round"
+        android:layout_marginTop="61dp" />
 
 </RelativeLayout>

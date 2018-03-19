@@ -3,6 +3,8 @@ import java.io.Serializable;
 public class Question implements Serializable {
     @com.google.gson.annotations.SerializedName("name")
     private String name;
+    @com.google.gson.annotations.SerializedName("round")
+    private String round;
     @com.google.gson.annotations.SerializedName("text")
     private String text;
     @com.google.gson.annotations.SerializedName("branch")
@@ -26,11 +28,14 @@ public class Question implements Serializable {
         return getName();
     }
     public final void setName(String n) { name =n; }
+
     public final void setCompany(String n) { company =n; }
     public final void setBranch(String n){branch=n;}
     public String getName() {
         return name;
     }
+    public String getRound(){return round;}
+    public final void setRound(String t){round=t;}
     public String getText() { return text; }
     public String getBranch(){return branch;}
     public String getCompany() { return company; }

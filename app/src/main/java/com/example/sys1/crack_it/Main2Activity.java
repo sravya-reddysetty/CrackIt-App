@@ -16,12 +16,15 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         setContentView(R.layout.activity_main2);
         final Spinner mySpinner=(Spinner) findViewById(R.id.branches);
         final Spinner comp=(Spinner)findViewById(R.id.company_name);
+        final Spinner round=(Spinner)findViewById(R.id.round_number);
         mySpinner.setOnItemSelectedListener(this);
         comp.setOnItemSelectedListener(this);
+        round.setOnItemSelectedListener(this);
 
        // Toast.makeText(getApplicationContext(),mySpinner.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
 
         final String text = mySpinner.getSelectedItem().toString();
+        final String ro=round.getSelectedItem().toString();
         sub=(Button)findViewById(R.id.Submit);
 
         sub.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +34,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                 Intent i=new Intent(Main2Activity.this,SeniorAdd.class);
                 i.putExtra("Value",mySpinner.getSelectedItem().toString());
                 i.putExtra("Val",comp.getSelectedItem().toString());
+                //i.putExtra("ro",round.getSelectedItem().toString());
 
                 startActivity(i);
             }
