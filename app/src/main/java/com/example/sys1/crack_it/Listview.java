@@ -5,9 +5,13 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import java.io.Serializable;
@@ -19,6 +23,31 @@ public class Listview extends AppCompatActivity {
     public ListView listView;
 
     public MyListAdapter adapter;
+    //search code
+    public boolean onCreateOptionMenu(Menu menu)
+    {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.menu_search,menu);
+        MenuItem item=menu.findItem(R.id.menusearch);
+        SearchView searchView=(SearchView)item.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                adapter.getFilter().filter(s);
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,4 +156,27 @@ public class Listview extends AppCompatActivity {
        };
        runAsyncTask(task);
    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //search code
+
+            MenuInflater inflater=getMenuInflater();
+            inflater.inflate(R.menu.menu_search,menu);
+            MenuItem item=menu.findItem(R.id.menusearch);
+            SearchView searchView=(SearchView)item.getActionView();
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String s) {
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String s) {
+                    adapter.getFilter().filter(s);
+                    return false;
+                }
+            });
+            return super.onCreateOptionsMenu(menu);
+    }
 }
