@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class Listview extends AppCompatActivity {
 
@@ -62,8 +64,14 @@ public class Listview extends AppCompatActivity {
 
 
        //Toast.makeText(getApplicationContext(),getIntent().getExtras().getString("company"),Toast.LENGTH_SHORT).show();
-        showAll(this.findViewById(android.R.id.content));
-     //Toast.makeText(getApplicationContext(), ( Temp.which)-'0',Toast.LENGTH_LONG).show();
+        try {
+            showAll(this.findViewById(android.R.id.content));
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //Toast.makeText(getApplicationContext(), ( Temp.which)-'0',Toast.LENGTH_LONG).show();
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -83,7 +91,8 @@ public class Listview extends AppCompatActivity {
             return task.execute();
         }
     }
-   public void showAll(View view) {
+   public void showAll(View view) throws ExecutionException, InterruptedException {
+
        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
            @Override
            protected Void doInBackground(Void... params) {
@@ -92,12 +101,19 @@ public class Listview extends AppCompatActivity {
                try {
                    final List<Question> results = Temp.mToDoTable.where()
                            .field("branch").eq(branch).execute().get();
+
                    runOnUiThread(new Runnable() {
 
                        @Override
                        public void run() {
                            adapter.clear();
                            for (Question item : results) {
+                               if(item.getRating()!=null){
+                                   if(item.getRating().startsWith("1")||item.getRating().startsWith("0")){
+                                       Temp.mToDoTable.delete(item.getId());
+                                       continue;
+                                   }
+                               }
                                adapter.add(item);
                            }
                        }
@@ -119,6 +135,12 @@ public class Listview extends AppCompatActivity {
                            public void run() {
                                adapter.clear();
                                for (Question item : results) {
+                                   if(item.getRating()!=null){
+                                       if(item.getRating().startsWith("1")||item.getRating().startsWith("0")){
+                                           Temp.mToDoTable.delete(item);
+                                           continue;
+                                       }
+                                   }
                                    adapter.add(item);
                                }
                            }
@@ -141,6 +163,12 @@ public class Listview extends AppCompatActivity {
                            public void run() {
                                adapter.clear();
                                for (Question item : results) {
+                                   if(item.getRating()!=null){
+                                       if(item.getRating().startsWith("1")||item.getRating().startsWith("0")){
+                                           Temp.mToDoTable.delete(item);
+                                           continue;
+                                       }
+                                   }
                                    adapter.add(item);
                                }
                            }

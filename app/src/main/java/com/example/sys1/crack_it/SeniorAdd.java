@@ -143,7 +143,7 @@ EditText ed,ed2,ed3,ed4;
     }
 
 
-        @Override
+   /*     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -161,7 +161,7 @@ EditText ed,ed2,ed3,ed4;
             }});
 
         builder.show();
-    }
+    }*/
     public void addItem(View view,EditText edd) {
         if (mclient == null) {
             return;
