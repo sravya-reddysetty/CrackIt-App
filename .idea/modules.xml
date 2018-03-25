@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/ccrakitt.iml" filepath="$PROJECT_DIR$/.idea/ccrakitt.iml" />
+      <module fileurl="file://C:\Users\sys1\AndroidStudioProjects\ccrakitt\app\app.iml" filepath="C:\Users\sys1\AndroidStudioProjects\ccrakitt\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ccrakitt.iml" filepath="$PROJECT_DIR$/ccrakitt.iml" />
+      <module fileurl="file://C:\Users\sys1\AndroidStudioProjects\ccrakitt\.idea\ccrakitt.iml" filepath="C:\Users\sys1\AndroidStudioProjects\ccrakitt\.idea\ccrakitt.iml" />
     </modules>
   </component>
 </project>

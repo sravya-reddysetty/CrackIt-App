@@ -19,12 +19,19 @@
         <item>Microsoft</item>
         <item>Adobe</item>
         <item>Oracle</item>
-        <item>deloitte</item>
+        <item>Deloitte</item>
         <item>SalesForce</item>
+        <item>Accolite </item>
         <item>Pega</item>
+        <item>Service Now </item>
+        <item>Zensar</item>
         <item>TCS</item>
-        <item>Pega</item>
+        <item>Wipro</item>
+        <item>JPMorgan</item>
         <item>Infosys</item>
+        <item>Capgemini</item>
+        <item>Accenture</item>
+        <item>Hyundai Mobis India Limited</item>
         <item>Tech-Mahendra</item>
         <item>Other</item>
     </string-array>
@@ -38,11 +45,16 @@
     </string-array>
 
     <string-array name="year">
+        <item>2013</item>
+        <item>2014</item>
         <item>2015</item>
         <item>2016</item>
         <item>2017</item>
         <item>2018</item>
         <item>2019</item>
+        <item>2020</item>
+
+
     </string-array>
     <string-array name="round">
         <item>Select Round-Number</item>
